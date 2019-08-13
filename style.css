@@ -16,7 +16,7 @@ body {
   min-height: 100%;
   background-color: $background_color;
   color: $text_color;
-  font-family: 'Open Sans', $font_2;
+  font-family: 'Open Sans', $text_font;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
@@ -37,7 +37,7 @@ main.main-sidebar {
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Droid Sans', $font_1;
+  font-family: $heading_font;
   font-weight: 400;
   margin-top: 0;
 }
@@ -695,7 +695,7 @@ ul {
 
 .sidebar-item {
   padding: 6px 0;
-  font-family: 'Droid Sans', $font_1;
+  font-family: $heading_font;
   color: #333;
 }
 
@@ -1995,7 +1995,7 @@ ul {
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
   word-break: break-word;
-  font-family: $font_2;
+  font-family: $text_font;
   line-height: 1.6;
 }
 
@@ -2274,7 +2274,7 @@ ul {
   content: attr(data-follower-count);
   color: #1e8098;
   display: inline-block;
-  font-family: $font_1;
+  font-family: $heading_font;
   margin-left: 15px;
   padding-left: 10px;
   position: absolute;
@@ -2543,7 +2543,7 @@ ul {
 }
 
 .post-content {
-  font-family: $font_2;
+  font-family: $text_font;
   line-height: 1.6;
   word-break: break-word;
 }
