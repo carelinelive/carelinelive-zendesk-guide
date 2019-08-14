@@ -440,6 +440,7 @@ ul {
 
 .logo img {
     max-height: 48px;
+    min-width: 48px;
 }
 
 .logo-link {
