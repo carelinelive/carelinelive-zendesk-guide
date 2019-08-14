@@ -433,9 +433,9 @@ ul {
     background: white;
     border-bottom: 1px solid #EEE;
     z-index: 10;
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.12),
-                0px 2px 2px 0px rgba(0, 0, 0, 0.1),
-                0px 1px 12px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 2px 2px 0 rgba(0, 0, 0, 0.1),
+    0 1px 12px 0 rgba(0, 0, 0, 0.05);
 }
 
 .logo img {
@@ -487,7 +487,7 @@ ul {
     display: flex;
     align-items: center;
 
-    margin-left:auto;
+    margin-left: auto;
 }
 
 .nav-wrapper a {
@@ -762,7 +762,6 @@ ul {
 .sidebar-item-link:hover {
     color: #333;
 }
-
 
 .sidebar-section {
     border-top: 1px solid #EEE;
@@ -4313,4 +4312,21 @@ ul {
 
 .new-request-container {
     max-width: 720px;
+}
+
+.article-image-right {
+    max-width: 50%;
+    float: right;
+    margin: 8px 8px 8px 16px;
+}
+
+.article-image-right {
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+.article-image-right img {
+    display: inline-block;
+    vertical-align: middle;
 }
