@@ -4331,6 +4331,12 @@ ul {
     margin-top: 32px;
 }
 
+.article-image {
+    margin: 0 auto;
+    max-width: 640px;
+}
+
+.article-image,
 .article-image-right {
     border-radius: 3px;
     overflow: hidden;
@@ -4338,6 +4344,7 @@ ul {
                 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.article-image img,
 .article-image-right img {
     display: inline-block;
     vertical-align: middle;
