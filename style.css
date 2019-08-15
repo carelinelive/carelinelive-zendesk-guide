@@ -452,7 +452,7 @@ ul {
 .logo-title {
     margin: 0;
     margin-left: 10px;
-    color: #FFF;
+    color: #1d6f68;
     white-space: nowrap;
 }
 
@@ -492,7 +492,7 @@ ul {
 
 .nav-wrapper a {
     border: 0;
-    color: #FFF;
+    color: #1d6f68;
     display: none;
     font-size: 14px;
     font-weight: 600;
@@ -512,7 +512,7 @@ ul {
 
 .nav-wrapper a:hover, .nav-wrapper a:focus, .nav-wrapper a:active {
     background-color: transparent;
-    color: #FFF;
+    color: #1d6f68;
     text-decoration: underline;
 }
 
@@ -2400,7 +2400,7 @@ ul {
 .status-label {
     background-color: #1eb848;
     border-radius: 4px;
-    color: #fff;
+    color: #1d6f68;
     font-size: 12px;
     margin-right: 2px;
     padding: 3px 10px;
