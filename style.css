@@ -619,11 +619,11 @@ ul {
 
 /***** User avatar *****/
 .user-avatar {
-    display: none;
     height: 25px;
     width: 25px;
     border-radius: 50%;
     vertical-align: middle;
+    object-fit: cover;
 }
 
 .avatar {
@@ -710,21 +710,20 @@ ul {
 }
 
 .sidebar-item .sidebar-item {
-    margin-left: 15px;
+    margin-left: 18px;
+    font-size: 14px;
 }
 
 .sidebar-item-title {
     display: block;
     color: #666;
     cursor: pointer;
-    font-size: 16px;
     text-decoration: none;
 }
 
 .sidebar-item-title:hover {
     color: #333;
 }
-
 
 .sidebar-item-title:before {
     content: "\E75E";
@@ -735,6 +734,10 @@ ul {
     -o-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
     opacity: .6;
+}
+
+.sidebar-item.open > ul {
+    margin: 16px 0;
 }
 
 .sidebar-item.open > .sidebar-item-title:before {
