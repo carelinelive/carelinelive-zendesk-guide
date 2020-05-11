@@ -11,9 +11,9 @@
                 <ul>
                     <li :class="['sidebar-item', isOpen(section.id)]" v-for='section in category.sections'
                         :data-id='section.id'>
-          <span class="sidebar-item-title" @click='setActiveSection(section.id)'>
-            {[{section.name}]}
-          </span>
+                          <span class="sidebar-item-title" @click='setActiveSection(section.id)'>
+                            {[{section.name}]}
+                          </span>
                         <ul v-if='section.id === activeSection'>
                             <li :class="['sidebar-item', isCurrent(article.id)]" v-for='article in section.articles'>
                                 <a :href='article.html_url' class="sidebar-item-link">
@@ -29,7 +29,7 @@
 
     <div class="page-container article-container" id="article-container">
         <article class="article">
-            <header class="article-header">
+            <header class="page-header">
                 <h1 title="{{article.title}}" class="article-title">
                     {{article.title}}
                     {{#if article.internal}}

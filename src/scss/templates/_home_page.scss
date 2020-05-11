@@ -3,6 +3,8 @@
 
 .home-page {
     padding: 0 24px;
+    max-width: $content-width;
+
     /***** Home *****/
     .home-title {
         margin: 48px 0 0;

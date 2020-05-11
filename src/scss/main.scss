@@ -2846,12 +2846,6 @@ ul {
     flex: 1;
 }
 
-@media (min-width: 1024px) {
-    .search-results-column {
-        flex: 0 0 45%;
-    }
-}
-
 .search-results-list {
     margin-bottom: 25px;
 }
@@ -2862,7 +2856,6 @@ ul {
 }
 
 .search-results-list > li:first-child {
-    border-top: 1px solid #ddd;
 }
 
 .search-result-description {
@@ -2906,6 +2899,12 @@ ul {
     content: "\1F4AC";
 }
 
+.search-result {
+    .search-result-link {
+        font-size: 1.4rem;
+    }
+}
+
 .search-result .meta-group {
     align-items: center;
 }
@@ -2920,9 +2919,6 @@ ul {
     margin: 0 5px;
 }
 
-.new-request-container {
-    max-width: 720px;
-}
 
 hr {
     display: block;

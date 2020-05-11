@@ -2,18 +2,12 @@
 @import 'shadows';
 
 .container {
+    width: 100%;
     max-width: $container-width;
     margin: 0 auto;
 
     .page-container {
         padding: 32px 8px;
-    }
-}
-
-@media (min-width: $container-width) {
-    .container {
-        padding: 0;
-        width: 90%;
     }
 }
 

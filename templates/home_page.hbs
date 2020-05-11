@@ -28,8 +28,7 @@
         </ul>
     </div>
 
-
-    <div class="container content home-page">
+    <div class="container home-page">
         <h1 class="home-title">
             {{settings.homepage_title}}
         </h1>
@@ -38,23 +37,21 @@
             {{settings.homepage_description}}
         </p>
 
-        <section class="home-page-section knowledge-base">
-            <section>
-                <ul class="blocks-list">
-                    {{#each categories}}
-                        <li class="blocks-item">
-                            <a href='{{url}}' class="blocks-item-link">
-                                <h3 class="blocks-item-title">
-                                    {{name}}
-                                </h3>
+        <section class="content home-page-section knowledge-base">
+            <ul class="blocks-list">
+                {{#each categories}}
+                    <li class="blocks-item">
+                        <a href='{{url}}' class="blocks-item-link">
+                            <h3 class="blocks-item-title">
+                                {{name}}
+                            </h3>
 
-                                <p class="blocks-item-description">{{excerpt description}}</p>
-                            </a>
-                        </li>
-                    {{/each}}
-                </ul>
-                {{pagination}}
-            </section>
+                            <p class="blocks-item-description">{{excerpt description}}</p>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+            {{pagination}}
         </section>
     </div>
 
