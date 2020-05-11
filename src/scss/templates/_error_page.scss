@@ -1,0 +1,14 @@
+@import '../variables';
+
+.error-page {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+@media (min-width: $container-width) {
+    .error-page {
+        padding: 0;
+        width: 90%;
+    }
+}

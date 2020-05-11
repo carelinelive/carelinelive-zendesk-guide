@@ -1,0 +1,168 @@
+@import 'variables';
+
+input,
+textarea,
+select {
+    font-size: 1rem;
+    border: 1px solid $input-border-color;
+    border-radius: $input-border-radius;
+    color: $input-text;
+
+    &:focus {
+        border: 1px solid $brand-teal;
+    }
+
+    &:disabled {
+        background-color: $input-background-disabled;
+    }
+}
+
+
+input {
+    max-width: 100%;
+
+    background: $input-background;
+    outline: none;
+
+    font-weight: 300;
+
+    transition: border .12s ease-in-out;
+
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("/hc/assets/dropdown-arrow.svg") no-repeat $input-background;
+    background-position: right 10px center;
+    padding: 8px 24px 8px 8px;
+    outline: none;
+    width: 100%;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+
+    resize: vertical;
+    outline: none;
+}
+
+
+/***** Forms *****/
+.form {
+    /*max-width: 650px;*/
+}
+
+.form footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.form-field ~ .form-field {
+    margin-top: 25px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-field input:focus {
+    border: 1px solid #1d6f68;
+}
+
+.form-field input[type="text"] {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-field input[type="text"]:focus {
+    border: 1px solid #1d6f68;
+}
+
+.form-field input[type="checkbox"] {
+    width: auto;
+}
+
+.form-field .nesty-input {
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    vertical-align: middle;
+}
+
+.form-field .nesty-input:focus {
+    border: 1px solid #1d6f68;
+    text-decoration: none;
+}
+
+.form-field textarea {
+    vertical-align: middle;
+}
+
+.form-field input[type="checkbox"] + label {
+    margin: 0 0 0 10px;
+}
+
+.form-field.required > label::after {
+    content: "*";
+    color: #f00;
+    margin-left: 2px;
+}
+
+.form-field p {
+    color: lighten($text-primary, 20%);
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+[data-loading="true"] input,
+[data-loading="true"] textarea {
+    background: transparent url("/hc/assets/loader.gif") 99% 50% no-repeat;
+    background-size: 16px 16px;
+}
+
+.form footer {
+    margin-top: 40px;
+    padding-top: 30px;
+}
+
+.form footer a {
+    color: lighten($text-primary, 20%);
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.form .suggestion-list {
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+.form .suggestion-list label {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.form .suggestion-list li {
+    padding: 10px 0;
+}
+
+.form .suggestion-list li a:visited {
+    color: darken($link, 20%);
+}

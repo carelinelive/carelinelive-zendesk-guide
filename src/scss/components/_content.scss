@@ -1,0 +1,22 @@
+@import '../variables';
+@import '../shadows';
+
+.content {
+    width: 100%;
+    height: auto;
+    min-height: 40vh;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 32px;
+    transform: translate3d(0, 0, 0);
+    background: #fff;
+    z-index: 2;
+
+    border-radius: 8px;
+
+    @include shadow(1);
+
+    h1 {
+        font-size: 2rem;
+    }
+}

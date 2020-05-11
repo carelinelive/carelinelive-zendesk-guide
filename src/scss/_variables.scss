@@ -1,0 +1,33 @@
+// Dimensions
+$container-width: 1160px;
+
+$button-border-radius: 4px;
+$input-border-radius: 4px;
+$sidebar-width: 240px;
+
+$breakpoint-small: 768px;
+
+// Colours
+$brand-teal: #2eafa4;
+$brand-teal-dark: #1d6f68;
+$brand-purple: #791e94;
+
+$window-background: mix(#fafafa, $brand-teal-dark, 97%);
+
+$text-primary: #333;
+$text-secondary: #555;
+$font-family: 'Nunito', sans-serif;
+$heading_font: $font-family;
+$link: $brand-teal-dark;
+$brand_text_color: white;
+$homepage_background_image: '';
+$community_background_image: '';
+$community_image: '';
+
+// Forms
+$input-background: white;
+$input-background-disabled: #ddd;
+
+$input-border-color: #ddd;
+
+$input-text: #222;
