@@ -1,19 +1,21 @@
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-
 <header class="header">
-  <div class="logo">
-    {{#link 'help_center' class='logo-link' }}
-    <img src="{{logo_url}}" alt="{{t 'logo'}}">
-    {{/link}}
-  </div>
-  {{search submit=false instant=true}}
-  <div class="nav-wrapper">
-    <nav class="user-nav" id="user-nav">
-      {{link 'new_request'}}
-    </nav>
-    {{user_info}}
-  </div>
+    <div class="logo">
+        {{#link 'help_center' class='logo-link' }}
+            <img src="{{logo_url}}" alt="{{t 'logo'}}">
+        {{/link}}
+    </div>
+
+    {{search submit=false instant=true}}
+
+    <div class="nav-wrapper">
+        <nav class="user-nav" id="user-nav">
+            {{link 'new_request'}}
+        </nav>
+
+        {{user_info}}
+    </div>
 </header>
+
 <div class="mobile-search-wrapper">
-  {{search submit=false instant=true}}
+    {{search submit=false instant=true}}
 </div>

@@ -1,0 +1,56 @@
+@import '../variables';
+
+/***** Tables *****/
+.table {
+    width: 100%;
+    table-layout: fixed;
+
+    th,
+    th a {
+        color: lighten($text-primary, 20%);
+        font-size: 13px;
+        font-weight: 300;
+        text-align: left;
+    }
+
+    tr {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        padding: 20px 0;
+    }
+
+    td {
+        display: block;
+    }
+
+    @media (min-width: 768px) {
+        table-layout: auto;
+
+        tr {
+            display: table-row;
+        }
+        td {
+            display: table-cell;
+        }
+
+        td,
+        th {
+            padding: 10px 20px;
+            height: 60px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        td,
+        th {
+            padding: 20px 30px;
+        }
+    }
+}
+
+[dir="rtl"] .table th,
+[dir="rtl"],
+.table th a {
+    text-align: right;
+}
+

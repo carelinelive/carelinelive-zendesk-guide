@@ -1,0 +1,114 @@
+@import 'variables';
+
+/***** Buttons *****/
+button,
+.button,
+[role="button"] {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+
+    border: 1px solid $brand-teal;
+    border-radius: $button-border-radius;
+    color: $brand-teal;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 2.34;
+    text-align: center;
+    transition: background-color .12s ease-in-out, border-color .12s ease-in-out, color .15s ease-in-out;
+    user-select: none;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+
+    @media (min-width: 768px) {
+        width: auto;
+    }
+
+    &:after {
+        color: $brand-teal;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &[aria-selected="true"] {
+        background-color: $brand-teal;
+        color: $brand_text_color;
+        text-decoration: none;
+    }
+
+    &[aria-selected="true"] {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: darken($brand-teal, 20%);
+            border-color: darken($brand-teal, 20%);
+        }
+    }
+
+    &[data-disabled],
+    &:disabled {
+        cursor: default;
+    }
+}
+
+.button-large,
+button[type="submit"],
+input[type="submit"] {
+    @extend .button;
+
+    background-color: $brand-purple;
+    border: 0;
+
+    color: white;
+    line-height: 2.72;
+    min-width: 190px;
+    padding: 0 2em;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: normal;
+
+    @media (min-width: 768px) {
+        width: auto;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &[aria-selected="true"] {
+        background-color: darken($brand-purple, 10%);
+        color: white;
+        text-decoration: none;
+    }
+
+    &[data-disabled],
+    &:disabled {
+        background-color: mix(#ddd, $brand-purple, 80%);
+        color: #555;
+    }
+
+    &[aria-selected="true"] {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: darken($brand-purple, 10%);
+        }
+    }
+}
+
+.button-secondary {
+    @extend .button;
+
+    color: lighten($text-primary, 20%);
+    border: 1px solid mix(#ddd, $brand-purple, 80%);
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $text-primary;
+        border: 1px solid #ddd;
+        background-color: darken($window-background, 3%);
+    }
+}
