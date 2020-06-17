@@ -255,6 +255,7 @@ ul {
 
 .section-tree .home-page-section {
     flex: initial;
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -282,9 +283,8 @@ ul {
 }
 
 .article-list-item {
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
-    padding: 15px 0;
+    padding: 4px 0;
+    color: $text-secondary;
 }
 
 .article-list-item a {
