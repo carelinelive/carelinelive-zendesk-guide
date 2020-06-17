@@ -1,4 +1,5 @@
 {
+  "private": true,
   "scripts": {
     "watch": "sass --watch src/scss/main.scss style.css",
     "prod": "sass src/scss/main.scss style.css"

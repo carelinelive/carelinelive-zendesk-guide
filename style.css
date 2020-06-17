@@ -1071,6 +1071,7 @@ ul {
 }
 .section-tree .home-page-section {
   flex: initial;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -1097,9 +1098,8 @@ ul {
 }
 
 .article-list-item {
-  border-bottom: 1px solid #ddd;
-  font-size: 16px;
-  padding: 15px 0;
+  padding: 4px 0;
+  color: #555;
 }
 
 .article-list-item a {
@@ -3676,7 +3676,7 @@ hr {
 .article-content h2,
 .article-content h3,
 .article-content p {
-  margin: 0;
+  margin: 0.5em;
 }
 .article-content h1, .article-content h2 {
   margin-top: 1.4rem;
@@ -3723,9 +3723,9 @@ hr {
   display: block;
   width: auto;
   max-width: 80%;
+  max-height: 40vh;
   margin: 16px auto;
   border-radius: 6px;
-  overflow: hidden;
   box-shadow: 0 0.25px 0.5px rgba(29, 111, 104, 0.07), 0 0.5px 1px rgba(29, 111, 104, 0.07), 0 1px 2px rgba(29, 111, 104, 0.07), 0 2px 4px rgba(29, 111, 104, 0.07), 0 4px 8px rgba(29, 111, 104, 0.07), 0 8px 16px rgba(29, 111, 104, 0.07);
   transition: all 0.3s;
 }
