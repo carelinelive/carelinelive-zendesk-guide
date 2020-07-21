@@ -109,6 +109,10 @@
 
     h2:not(:first-child) {
     }
+
+    a[href] {
+        text-decoration: underline dotted;
+    }
 }
 
 @media (min-width: 768px) {
@@ -226,16 +230,11 @@
     list-style-type: disc;
 }
 
-.article-body a:visited {
-    color: darken($link, 20%);
-}
-
 .article-body a:hover,
 .article-body a:active,
 .article-body a:focus {
     text-decoration: underline;
 }
-
 
 .article-body code {
     background: darken($window-background, 3%);
