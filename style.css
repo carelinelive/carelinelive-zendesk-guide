@@ -3675,8 +3675,9 @@ hr {
 .article-content h1,
 .article-content h2,
 .article-content h3,
+.article-content h4,
 .article-content p {
-  margin: 0.5em;
+  margin: 0.5em 0;
 }
 .article-content h1, .article-content h2 {
   margin-top: 1.4rem;
