@@ -7,12 +7,6 @@
     max-width: 100%;
 }
 
-.article-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 960px;
-}
-
 .article-header {
     display: block;
     margin-left: 16px;
@@ -25,67 +19,6 @@
 
 .article-content {
     margin-bottom: 64px;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    p {
-        margin: .5em 0;
-    }
-
-    h1, h2 {
-        margin-top: 1.4rem;
-    }
-
-    h1 {
-        position: relative;
-        font-size: 1.8em;
-        line-height: 1;
-
-        &:before {
-            display: block;
-            content: '';
-            position: absolute;
-            left: -14px;
-            width: 2px;
-            height: 60%;
-
-            top: 50%;
-            transform: translateY(-50%);
-
-            background: rgba($brand-purple, .2);
-            border-radius: 2px;
-            transition: background .1s;
-        }
-
-        &:hover {
-            &:before {
-                background: rgba($brand-purple, .6);
-            }
-        }
-    }
-
-    h2 {
-        font-size: 1.4em;
-    }
-
-    h3 {
-        font-size: 1.2em;
-    }
-
-    h4 {
-        font-size: 1.1em;
-    }
-
-    h5, h6 {
-        font-size: 1em;
-    }
-
-    h2, h3, h4, h5, h6 {
-        letter-spacing: -0.2px;
-        font-weight: normal;
-    }
 
     p > img {
         position: relative;
@@ -105,9 +38,6 @@
             transform: scale(1.2);
             @include shadow(4, black, .1);
         }
-    }
-
-    h2:not(:first-child) {
     }
 
     a[href] {
@@ -132,7 +62,6 @@
         vertical-align: middle;
     }
 }
-
 
 .article-title {
     @media (min-width: 768px) {
@@ -162,13 +91,58 @@
 }
 
 .article-body {
+    @import '../elements/content';
+
+    font-size: 16px;
+
     table {
         border-collapse: collapse;
-        border: 0 #efefef;
+        border: 0 dotted #efefef;
 
         th, td {
-            padding: 4px 8px;
+            padding: 8px 8px;
+            border-style: dotted;
+            vertical-align: top;
+
+            > p {
+                margin: 0;
+                padding: 0;
+            }
         }
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+        text-decoration: underline;
+    }
+
+    code {
+        background: darken($window-background, 3%);
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 0 5px;
+        margin: 0 2px;
+    }
+
+    pre {
+        background: darken($window-background, 3%);
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 10px 15px;
+        overflow: auto;
+        white-space: pre;
+    }
+
+    blockquote {
+        border-left: 1px solid #ddd;
+        color: lighten($text-primary, 20%);
+        font-style: italic;
+        padding: 0 15px;
+    }
+
+    > p:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -214,71 +188,6 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 
     text-align: center;
-}
-
-.article-body ul,
-.article-body ol {
-    padding-left: 20px;
-    list-style-position: outside;
-    margin: 8px 0 16px 8px;
-}
-
-.article-body ul ul,
-.article-body ol ol,
-.article-body ol ul,
-.article-body ul ol {
-    color: $text-secondary;
-    margin: 0 0 8px;
-
-    line-height: 1.2;
-
-    > li {
-        margin-bottom: 2px;
-    }
-}
-
-.article-body ul {
-    list-style-type: disc;
-}
-
-.article-body a:hover,
-.article-body a:active,
-.article-body a:focus {
-    text-decoration: underline;
-}
-
-.article-body code {
-    background: darken($window-background, 3%);
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    padding: 0 5px;
-    margin: 0 2px;
-}
-
-.article-body pre {
-    background: darken($window-background, 3%);
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    padding: 10px 15px;
-    overflow: auto;
-    white-space: pre;
-}
-
-.article-body blockquote {
-    border-left: 1px solid #ddd;
-    color: lighten($text-primary, 20%);
-    font-style: italic;
-    padding: 0 15px;
-}
-
-.article-body > p:last-child {
-    margin-bottom: 0;
-}
-
-.article-content {
-    line-height: 1.6;
-    margin: 0 0 40px;
-    word-wrap: break-word;
 }
 
 .article-footer {

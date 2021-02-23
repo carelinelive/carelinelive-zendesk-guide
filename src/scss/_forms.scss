@@ -55,13 +55,21 @@ textarea {
 
 /***** Forms *****/
 .form {
-    /*max-width: 650px;*/
+    margin-top: 48px !important;
+    max-width: 480px !important;
 }
 
 .form footer {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px 0;
+}
+
+.g-recaptcha {
+    display: none;
 }
 
 .form-field ~ .form-field {
@@ -137,10 +145,6 @@ textarea {
     background-size: 16px 16px;
 }
 
-.form footer {
-    margin-top: 40px;
-    padding-top: 30px;
-}
 
 .form footer a {
     color: lighten($text-primary, 20%);

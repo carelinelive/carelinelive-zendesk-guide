@@ -1,60 +1,26 @@
-<main class="main-sidebar" role="main">
-    <div id="sidebar" class="sidebar-panel">
-        <ul class="sidebar">
-            <li class="sidebar-item sidebar-home open">
-                <a href="{{page_path 'help_center'}}" class="sidebar-item-title">
-                    Home
-                </a>
-            </li>
-            <li class="sidebar-section" v-for='category in categories' :data-id='category.id'>
-                <h4 class="sidebar-category-title" v-cloak>{[{category.name}]}</h4>
-                <ul>
-                    <li :class="['sidebar-item', isOpen(section.id)]" v-for='section in category.sections'
-                        :data-id='section.id'>
-                      <span class="sidebar-item-title" @click='setActiveSection(section.id)'>
-                        {[{section.name}]}
-                      </span>
+<article class="home-page">
+    <h1 class="home-title">
+        {{settings.homepage_title}}
+    </h1>
 
-                        <ul v-if='section.id === activeSection'>
-                            <li :class="['sidebar-item', isCurrent(article.id)]" v-for='article in section.articles'>
-                                <a :href='article.html_url' class="sidebar-item-link">
-                                    {[{article.title}]}
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+    <p class="home-desc">
+        {{settings.homepage_description}}
+    </p>
+
+    <section class="home-page-section knowledge-base">
+        <ul class="blocks-list">
+            {{#each categories}}
+                <li class="blocks-item">
+                    <a href='{{url}}' class="blocks-item-link">
+                        <h3 class="blocks-item-title">
+                            {{name}}
+                        </h3>
+
+                        <p class="blocks-item-description">{{excerpt description}}</p>
+                    </a>
+                </li>
+            {{/each}}
         </ul>
-    </div>
-
-    <div class="container home-page">
-        <h1 class="home-title">
-            {{settings.homepage_title}}
-        </h1>
-
-        <p class="home-desc">
-            {{settings.homepage_description}}
-        </p>
-
-        <section class="content home-page-section knowledge-base">
-            <ul class="blocks-list">
-                {{#each categories}}
-                    <li class="blocks-item">
-                        <a href='{{url}}' class="blocks-item-link">
-                            <h3 class="blocks-item-title">
-                                {{name}}
-                            </h3>
-
-                            <p class="blocks-item-description">{{excerpt description}}</p>
-                        </a>
-                    </li>
-                {{/each}}
-            </ul>
-            {{pagination}}
-        </section>
-    </div>
-
-
-    <script>sidebar.$mount('#sidebar');</script>
-</main>
+        {{pagination}}
+    </section>
+</article>

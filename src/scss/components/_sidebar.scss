@@ -4,19 +4,15 @@ main.main-sidebar {
     display: flex;
     justify-content: center;
     flex: 1;
-
-    > .container {
-        margin: 0;
-    }
 }
 
 .sidebar-panel {
-    padding: 88px 24px 0;
+    padding: 88px 0 0 24px;
     width: $sidebar-width;
     flex-shrink: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    text-align: right;
+    text-align: left;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
 }
@@ -31,7 +27,7 @@ main.main-sidebar {
     font-family: $heading_font;
     color: #333;
     font-size: 14px;
-    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
 
     .sidebar-item-title {
         display: block;
@@ -47,7 +43,6 @@ main.main-sidebar {
         &:before {
             content: "\E75E";
             font-family: "entypo";
-            margin-right: 5px;
             -webkit-transition: all .15s ease-in-out;
             -moz-transition: all .15s ease-in-out;
             -o-transition: all .15s ease-in-out;
@@ -58,14 +53,14 @@ main.main-sidebar {
 
     // Nested item
     .sidebar-item {
-        padding: 4px 8px 4px 0;
+        padding: 8px 8px;
         font-size: 13px;
         line-height: 1.1;
-        border-right: 1px solid rgba($brand-purple, .1);
+        border-left: 1px solid rgba($brand-purple, .1);
 
         &:hover,
         &.current {
-            border-right: 1px solid $brand-purple;
+            border-left: 1px solid $brand-purple;
         }
     }
 

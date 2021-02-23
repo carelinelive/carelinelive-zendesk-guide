@@ -4,11 +4,8 @@
 .container {
     width: 100%;
     max-width: $container-width;
-    margin: 0 auto;
-
-    .page-container {
-        padding: 32px 8px;
-    }
+    margin: 32px auto 0;
+    padding: 0 24px;
 }
 
 .container-divider {
