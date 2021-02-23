@@ -3780,6 +3780,14 @@ hr {
     width: auto;
   }
 }
+.article-body table {
+  border-collapse: collapse;
+  border: 0 #efefef;
+}
+.article-body table th, .article-body table td {
+  padding: 4px 8px;
+}
+
 .article-body img {
   height: auto;
   max-width: 100%;
