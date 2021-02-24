@@ -4,6 +4,10 @@ main.main-sidebar {
     display: flex;
     justify-content: center;
     flex: 1;
+
+    .sidebar-search {
+        margin-bottom: 24px;
+    }
 }
 
 .sidebar-panel {

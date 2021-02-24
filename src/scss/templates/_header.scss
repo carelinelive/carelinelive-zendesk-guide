@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: $container-width;
     height: 70px;
     margin: 0 auto;
     padding: 0 32px;
@@ -27,9 +26,7 @@
         color: #1d6f68;
         white-space: nowrap;
     }
-
 }
-
 
 .user-nav {
     display: inline-block;
@@ -114,11 +111,9 @@
 
 .header .search {
     display: none;
-    min-width: 300px;
     width: 100%;
-    margin: 0 32px 0 168px;
+    margin: 0 32px;
 }
-
 
 .mobile-search-wrapper {
     padding: 10px;
