@@ -680,8 +680,7 @@ main.main-sidebar .sidebar-search {
 
 .page-header {
   display: block;
-  margin-left: 16px;
-  margin-bottom: 16px;
+  margin: 0 auto 16px;
   max-width: 960px;
 }
 .page-header h1 {
