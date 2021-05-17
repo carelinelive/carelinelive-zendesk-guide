@@ -43,6 +43,12 @@
     a[href] {
         text-decoration: underline dotted;
     }
+
+    .article-attachments {
+        margin-top: 64px;
+        padding-top: 24px;
+        border-top: 1px solid #dfdfdf;
+    }
 }
 
 @media (min-width: 768px) {
