@@ -36,6 +36,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   letter-spacing: -0.02em;
 }
+h1 a:not([href]), h2 a:not([href]), h3 a:not([href]), h4 a:not([href]), h5 a:not([href]), h6 a:not([href]) {
+  text-decoration: none !important;
+}
 
 h1, h2, h3 {
   color: #1d6f68;
@@ -436,6 +439,11 @@ main.main-sidebar .sidebar-search {
   text-align: left;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
+}
+.sidebar-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -870,12 +878,6 @@ main.main-sidebar .sidebar-search {
 
 .blocks-item-description:not(:empty) {
   margin-top: 10px;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .dropdown-toggle::after {
@@ -3657,6 +3659,37 @@ hr {
 
 .article-header h1 {
   margin: 0;
+}
+
+.article-toc {
+  display: none;
+  padding: 16px 24px;
+  margin-bottom: 64px;
+  border: 1px solid rgba(46, 175, 164, 0.2);
+  background: rgba(243, 246, 246, 0.4);
+  min-width: 50%;
+  border-radius: 4px;
+}
+.article-toc.showing {
+  display: inline-block;
+}
+.article-toc > ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 8px;
+}
+.article-toc > ul li a {
+  display: block;
+  padding: 4px 0;
+}
+.article-toc > ul ul li a {
+  font-weight: normal;
+}
+.article-toc > ul > li {
+  font-weight: bold;
+}
+.article-toc a[href] {
+  text-decoration: none !important;
 }
 
 .article-content {

@@ -19,6 +19,13 @@ main.main-sidebar {
     text-align: left;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
+
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 @media (max-width: 768px) {

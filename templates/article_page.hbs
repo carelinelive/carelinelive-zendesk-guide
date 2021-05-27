@@ -9,25 +9,28 @@
     </header>
 
     <section class="article-content content">
+
+        <div class="article-toc"></div>
+
         <div class="article-body">{{article.body}}</div>
 
         {{#if attachments }}
-        <div class="article-attachments">
-            <h2>Attachments</h2>
+            <div class="article-attachments">
+                <h2>Attachments</h2>
 
-            <ul class="attachments">
-                {{#each attachments}}
-                    <li class="attachment-item">
-                        <a href="{{url}}" target="_blank">{{name}}</a>
-                        <div class="attachment-meta meta-group">
-                            <span class="attachment-meta-item meta-data">{{size}}</span>
-                            <a href="{{url}}" target="_blank"
-                               class="attachment-meta-item meta-data">Download</a>
-                        </div>
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
+                <ul class="attachments">
+                    {{#each attachments}}
+                        <li class="attachment-item">
+                            <a href="{{url}}" target="_blank">{{name}}</a>
+                            <div class="attachment-meta meta-group">
+                                <span class="attachment-meta-item meta-data">{{size}}</span>
+                                <a href="{{url}}" target="_blank"
+                                   class="attachment-meta-item meta-data">Download</a>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
         {{/if}}
     </section>
 
@@ -73,3 +76,96 @@
 
     </footer>
 </article>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<script>
+    window.onload = function () {
+
+        var $toc = document.querySelector('.article-toc');
+        var $articleBody = document.querySelector('.article-body');
+
+        function extractId(str) {
+            var matches = str.match(/id="(.*?)"/);
+
+            if (matches && matches.length > 1) {
+                return matches[1];
+            }
+
+            return null;
+        }
+
+        function slugify(str) {
+            str = str.replaceAll(/<[^>]*>/g, ''); // Remove html
+            str = str.replace(/^\s+|\s+$/g, ''); // trim
+            str = str.toLowerCase();
+
+            // remove accents, swap ñ for n, etc
+            var from = 'àáäâèéëêìíïîòóöôùúüûñç·/_,:;';
+            var to = 'aaaaeeeeiiiioooouuuunc------';
+            for (var i = 0, l = from.length; i < l; i++) {
+                str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+            }
+
+            str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+                    .replace(/-+/g, '-'); // collapse dashes
+
+            return str;
+        }
+
+        $articleBody.innerHTML = $articleBody.innerHTML.replace(
+                /<\s*h([\d])([^>]*)>(.*?)<\s*\/\s*h([\d])>/gi,
+                function (str, openLevel, attributes, titleText, closeLevel) {
+                    if (openLevel !== closeLevel) {
+                        return;
+                    }
+
+                    var id = extractId(str);
+
+                    if (!id) {
+                        var anchor = id || slugify(titleText);
+                        attributes += ' id="' + anchor + '"'
+                    }
+
+                    return '<h' + openLevel + ' ' + attributes + '>' + titleText + '</h' + closeLevel + '>';
+                }
+        )
+
+        if (tocbot) {
+            tocbot.init({
+                tocSelector: '.article-toc',
+                contentSelector: '.article-body',
+                headingSelector: 'h1, h2, h3',
+                orderedList: false,
+                scrollSmooth: false,
+                disableTocScrollSync: true
+            });
+        }
+
+        if ($toc.textContent.length) {
+            $toc.innerHTML = '<h2>On this page</h2>' + $toc.innerHTML;
+            $toc.classList.add('showing');
+        } else {
+            $toc.style.display = 'none';
+        }
+
+        // Make sure we scroll the given element into view after IDs have been dynamically added
+        if (location.hash) {
+            var $scrollElement = document.querySelector(location.hash);
+
+            if ($scrollElement) {
+                $scrollElement.scrollIntoView({
+                    behavior: 'auto'
+                });
+            } else {
+                $scrollElement = document.querySelector('[name="' + location.hash.replace('#', '') + '"]');
+
+                if ($scrollElement) {
+                    $scrollElement.scrollIntoView({
+                        behavior: 'auto'
+                    });
+                }
+            }
+        }
+    };
+</script>
