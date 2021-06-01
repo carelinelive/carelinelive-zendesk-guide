@@ -168,7 +168,7 @@
         }
 
         $articleBody.innerHTML = $articleBody.innerHTML.replace(
-                /:([a-zA-Z]+):/gi,
+                /:([a-zA-Z_]+):/gi,
                 function (str, icon) {
                     return '<span class="material-icons material-icons-round">' + icon + '</span>';
                 }
