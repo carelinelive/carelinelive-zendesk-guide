@@ -80,7 +80,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <script>
     window.onload = function () {
-
         var $toc = document.querySelector('.article-toc');
         var $articleBody = document.querySelector('.article-body');
 
@@ -167,5 +166,12 @@
                 }
             }
         }
+
+        $articleBody.innerHTML = $articleBody.innerHTML.replace(
+                /:([a-zA-Z]+):/gi,
+                function (str, icon) {
+                    return '<span class="material-icons material-icons-round">' + icon + '</span>';
+                }
+        );
     };
 </script>
